@@ -1,0 +1,43 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Data
+@model DataSet
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Export Page</title>
+</head>
+<body>
+
+    <!--
+
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Id</th>
+            <th>Employee Name</th>
+            <th>Date</th>
+        </tr>
+        at*foreach (DataRow row in Model.Tables[0].Rows)
+        {
+            <tr>
+                <td>at*row["dataId"]</td>
+                <td>at*row["reportingEmployee"]</td>
+                <td>at*row["Date"]</td>
+            </tr>
+        }
+        
+    </table>
+    
+    -->
+    <br />
+    <br />
+    <form method="post" asp-controller="ExportToExcel" asp-action="Export">
+        <input type="submit" class="btn btn-primary btn-lg" role="button" value="Export to Excel File" />
+    </form>
+</body>
+</html>

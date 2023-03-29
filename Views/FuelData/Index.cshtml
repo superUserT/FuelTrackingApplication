@@ -1,0 +1,62 @@
+﻿@model List<Fuel_Tracking_application.Models.Domain.Fuel>
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Data
+<!--at*model DataSet-->
+
+
+@{
+}
+
+<h1>Fuel Data</h1>
+
+<table class="table"> 
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Reporting Employee Name</th>
+        <th>Date of Log</th>
+        <th>Vehicle Odometer Reading</th>      
+        <th>Filled Volume</th>
+        <th>Fuel Price</th>
+        <th>Filled?</th>
+        <th>Vehicle Registration</th>
+        <th>Vehicle Make</th>
+        <th>Station Type</th>
+        <th>Site Location</th>
+        <th>Fuel Type</th>
+        <th>Edit</th>
+
+    </tr>
+    </thead>
+
+<tbody>
+    @foreach (var fuel in Model)
+    {
+        <tr>
+            <td>@fuel.dataId</td>
+            <td>@fuel.reportingEmployee</td>
+            <td>@fuel.Date.ToString("dd-MM-yyyy")</td>
+            <!-- odometer total here-->
+            <td>@fuel.odometerTotal</td>
+            <td>@fuel.filledVolume</td>
+            <td>@fuel.fuelPrice</td>
+            <td>@fuel.filled</td>
+            <td>@fuel.vehicleregistrationNumber</td>
+            <td>@fuel.vehicleMake</td>
+            <td>@fuel.fillStationType</td>
+            <td>@fuel.siteLocation</td>
+            <td>@fuel.fuelType</td>
+                
+
+            <td><a href="FuelData/View/@fuel.dataId">Edit</a></td>
+        </tr>
+    }       
+</tbody>
+</table>
+
+<br />
+<br />
+<form method="post" asp-controller="Home" asp-action="Export">
+    <input type="submit" value="Export" />
+</form>
+

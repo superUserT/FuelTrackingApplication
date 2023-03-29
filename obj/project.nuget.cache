@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "MXaAyPenF3YMVpT3nXwtd4HnDVN7utU/4LTJNscUl4bmyzkLPxQ15EHS6JU2lOyhXAGQKAM8sD0joTbzCSHUMg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Joyce.Rantsho\\Documents\\Dev\\Projects\\Fuel Tracking application\\Fuel Tracking application.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "ClosedXML"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "ChartJS"
+    }
+  ]
+}

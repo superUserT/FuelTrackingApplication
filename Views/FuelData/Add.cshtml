@@ -1,0 +1,76 @@
+﻿@model Fuel_Tracking_application.Models.AddFuelDataModel
+@{
+}
+
+<h1>Add Fuel Data</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Vehicle Registration</label>
+        <input type="text" class="form-control" asp-for="vehicleregistrationNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Vehicle Make</label>
+        <input type="text" class="form-control" asp-for="vehicleMake">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Reporting Employee Name</label>
+        <input type="text" class="form-control" asp-for="reportingEmployee">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Date of Log</label>
+        <input type="date" class="form-control" asp-for="Date">
+    </div>
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Odometer Reading</label>
+        <input type="number" class="form-control" step=".01" asp-for="odometerTotal">
+    </div>
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Filled Volume</label>
+        <input type="number" class="form-control" step=".01" asp-for="filledVolume">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Reported Fuel Price(R)</label>
+        <input type="number" step=".01" class="form-control" asp-for="fuelPrice">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fill Station Type (Inland or Costal)</label>
+        <input type="text" class="form-control" asp-for="fillStationType">
+    </div>
+    <!--
+    <div class="mb-3">
+        <label for="" class="form-label">Fill Station Type</label>
+        at*Html.DropDownList("Fill Station Type", Html.GetEnumSelectList
+        <Fuel_Tracking_application.Models.Domain.FillStationType>(),"Select Station Type", new {at*class = "form-control"})   
+    </div>
+    -->
+    <div class="mb-3">
+        <label for="" class="form-label">Vehicle Filled (Yes or No)</label>
+        <input type="text" class="form-control" asp-for="filled">
+    </div>
+    <!--
+    <div class="mb-3">
+        <label for="" class="form-label">Vehicle Filled?</label>
+        at*Html.DropDownList("Filled?", Html.GetEnumSelectList
+        <Fuel_Tracking_application.Models.Domain.Filled>(),"Select Answer", new {at*class = "form-control"})
+    </div>
+    -->
+    <div class="mb-3">
+        <label for="" class="form-label">Site Location</label>
+        <input type="text" class="form-control" asp-for="siteLocation">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fuel Type</label>
+        <input type="text" class="form-control" asp-for="fuelType">
+    </div>
+    <!---
+    <div class="mb-3">
+        <label for="" class="form-label">Fuel Type</label>
+        at*Html.DropDownList("Fuel Type", Html.GetEnumSelectList
+        <Fuel_Tracking_application.Models.Domain.FuelType>(),"Select Fuel Type", new {at*class = "form-control"})
+    </div>
+
+    -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
